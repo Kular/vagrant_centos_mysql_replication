@@ -1,0 +1,67 @@
+[client]
+<% if @port %>
+port                           = <%= @port %>
+<% end %>
+<% if @socket_file %>
+socket                         = <%= @socket_file %>
+<% end %>
+
+default-character-set 		   = <%= @default_character_set %>
+
+[mysqld_safe]
+socket                         = <%= @socket_file %>
+<% if @nice %>
+nice                           = 0
+<% end %>
+
+[mysqld]
+user                           = mysql
+pid-file                       = <%= @pid_file %>
+socket                         = <%= @socket_file %>
+<% if @port %>
+port                           = <%= @port %>
+<% end %>
+<% if @basedir %>
+basedir                        = <%= @base_dir %>
+<% end %>
+<% if @data_dir %>
+datadir                        = <%= @data_dir %>
+<% end %>
+<% if @tmpdir %>
+tmpdir                         = /tmp
+<% end %>
+<% if @lc_messages_dir %>
+lc-messages-dir                = <%= @lc_messages_dir %>
+<% end %>
+
+
+character-set-server		   = <%= @character_set_server %>
+
+
+innodb_buffer_pool_size 	   = <%= @innodb_buffer_pool_size %>
+
+
+<% if @max_allowed_packet %> 
+max_allowed_packet			   = <%= @max_allowed_packet %>
+<% end %>
+
+<% if @log_bin %>
+log-bin						   = <%= @log_bin %>
+<% end %> 
+
+<% if @server_id %>
+server-id					   = <%= @server_id %>
+<% end %>
+
+<% if @sync_binlog %>
+sync_binlog                    = <%= @sync_binlog %>
+<% end %>
+
+<% if @innodb_flush_log_at_trx_commit %>
+innodb_flush_log_at_trx_commit = <%= @innodb_flush_log_at_trx_commit %>
+<% end %>
+
+[mysql]
+<% if @include_dir %>
+!includedir <%= @include_dir %>
+<% end %>
