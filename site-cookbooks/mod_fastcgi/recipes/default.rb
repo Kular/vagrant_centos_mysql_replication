@@ -10,7 +10,7 @@ require 'digest/sha2'
 
 
 filename = "mod_fastcgi-current.tar.gz"
-download_dir = "/opt"
+download_dir = "/tmp"
 remote_uri = "http://www.fastcgi.com/dist/mod_fastcgi-current.tar.gz"
 file_checksum = Digest::SHA256.digest(filename)
 folder_name = node['mod_fastcgi']['folder_name']
