@@ -24,7 +24,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
         'mysql::client',
         'Apache',
         'mod_fastcgi',
-        'cpanm'
+        'cpanm',
+        'amon2'
       ]
       chef.json = {
         mysql: {
@@ -39,6 +40,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
         },
         mod_fastcgi: {
           folder_name: "mod_fastcgi-2.4.6"
+        },
+        amon2: {
+          version: "3.99_01"
         }
       }
     end
