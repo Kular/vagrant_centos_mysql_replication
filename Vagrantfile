@@ -23,7 +23,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
         'mysql::server',
         'mysql::client',
         'Apache',
-        'mod_fastcgi'
+        'mod_fastcgi',
+        'cpanm'
       ]
       chef.json = {
         mysql: {
