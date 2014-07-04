@@ -22,7 +22,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
         'yum-mysql-community::connectors',
         'mysql::server',
         'mysql::client',
-        'Apache'
+        'Apache',
+        'mod_fastcgi'
       ]
       chef.json = {
         mysql: {
@@ -34,6 +35,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
           server_id: "1",
           sync_binlog: "1",
           innodb_flush_log_at_trx_commit: "1"
+        },
+        mod_fastcgi: {
+          folder_name: "mod_fastcgi-2.4.6"
         }
       }
     end
