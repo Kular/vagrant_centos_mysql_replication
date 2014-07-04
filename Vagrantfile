@@ -21,7 +21,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
         'yum',
         'yum-mysql-community::connectors',
         'mysql::server',
-        'mysql::client'
+        'mysql::client',
+        'Apache'
       ]
       chef.json = {
         mysql: {
