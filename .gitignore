@@ -42,6 +42,7 @@ build/
 ### ChefCookbook ###
 .vagrant
 /cookbooks
+/site-cookbooks/*/README*
 
 # Bundler
 bin/*
