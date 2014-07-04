@@ -1,7 +1,7 @@
 name             'Apache'
-maintainer       'YOUR_COMPANY_NAME'
-maintainer_email 'YOUR_EMAIL'
+maintainer       'Xiang Li'
+maintainer_email 'xiang.li@dena.jp'
 license          'All rights reserved'
 description      'Installs/Configures Apache'
-long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
+
 version          '0.1.0'
